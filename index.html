@@ -59,6 +59,20 @@
 	college.bindPopup("<b>C Block</b><br>Strode College").openPopup();
 	
 	//var college1 = L.marker([51.129952, -2.7334955]).addTo(mymap);
+      
+	var baseMaps = {
+           "OSM ": osm,
+           "Google": google
+        };
+	
+        var overlayMaps = {
+	    "Surface": surface,
+            "Marker": marker,
+            "College": college
+       };
+	
+
+       L.control.layers(baseMaps, overlayMaps).addTo(mymap);
 	
 	mymap.addControl(new L.Control.Fullscreen());
 	L.control.mousePosition().addTo(mymap);
