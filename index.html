@@ -53,13 +53,13 @@
 	var tor = L.marker([51.14471, -2.69866]).addTo(mymap);   
 	tor.bindPopup("<img style='width: 300px' src='tor.jpg'/><br /><b>Glastonbury Tor</b>").openPopup();	
 	
-	var cBlock = L.marker([51.129852, -2.7334955]).addTo(mymap);
+	var cBlock = L.marker([51.129852, -2.7334955]);
 	cBlock.bindPopup("<b>C Block</b><br>Strode College").openPopup();
 	
-	var college1 = L.marker([51.129952, -2.7334955]).addTo(mymap);
+	var college1 = L.marker([51.129955, -2.7334956]);
 	college1.bindPopup("<b>College1</b><br>Strode College").openPopup();
 	
-	var college = L.layerGroup([cblock, college1]);
+	var college = L.layerGroup([cBlock, college1]).addTo(mymap);
       
 	var baseMaps = {
            "OSM ": osm,
@@ -70,12 +70,12 @@
 	    "Surface": surface,
             "Tor": tor,
             "College": college
-       };
+        };
 
-       L.control.layers(baseMaps, overlayMaps).addTo(mymap);
+         L.control.layers(baseMaps, overlayMaps).addTo(mymap);
 	
-	mymap.addControl(new L.Control.Fullscreen());
-	L.control.mousePosition().addTo(mymap);
+	 mymap.addControl(new L.Control.Fullscreen());
+	 L.control.mousePosition().addTo(mymap);
 
 </script>
 
