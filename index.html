@@ -56,10 +56,10 @@
 	var cBlock = L.marker([51.129852, -2.7334955]);
 	cBlock.bindPopup("<b>C Block</b><br>Strode College").openPopup();
 	
-	var college1 = L.marker([51.129955, -2.7334956]);
-	college1.bindPopup("<b>College1</b><br>Strode College").openPopup();
+	var eBlock = L.marker([51.129955, -2.7334956]);
+	eBlock.bindPopup("<b>E Block</b><br>Strode College").openPopup();
 	
-	var college = L.layerGroup([cBlock, college1]).addTo(mymap);
+	var college = L.layerGroup([cBlock, eBlock]).addTo(mymap);
       
 	var baseMaps = {
            "OSM ": osm,
@@ -72,10 +72,10 @@
             "College": college
         };
 
-         L.control.layers(baseMaps, overlayMaps).addTo(mymap);
+        L.control.layers(baseMaps, overlayMaps).addTo(mymap);
 	
-	 mymap.addControl(new L.Control.Fullscreen());
-	 L.control.mousePosition().addTo(mymap);
+	mymap.addControl(new L.Control.Fullscreen());
+	L.control.mousePosition().addTo(mymap);
 
 </script>
 
