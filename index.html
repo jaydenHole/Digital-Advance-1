@@ -2,7 +2,7 @@
 <html>
 <head>
 	
-	<title>Quick Start - Leaflet</title>
+	<title>Strode College Campus Map</title>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="L.Control.MousePosition.css">
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
-    //<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
 	
 </head>
 <body>
@@ -57,7 +57,7 @@
 	cBlock.bindPopup("<b>C Block</b><br>Strode College").openPopup();
 	
 	var college1 = L.marker([51.129952, -2.7334955]).addTo(mymap);
-	college.bindPopup("<b>College1</b><br>Strode College").openPopup();
+	college1.bindPopup("<b>College1</b><br>Strode College").openPopup();
 	
 	var college = L.layerGroup([cblock, college1]);
       
